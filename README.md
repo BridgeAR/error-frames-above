@@ -6,9 +6,7 @@ Champion: Ruben Bridgewater
 
 Author: Ruben Bridgewater <ruben@bridgewater.de>
 
-TODO: Define a stack frame is implementation defined.
-
-Stage: 0
+Stage: 1
 
 ## Overview
 
@@ -118,6 +116,8 @@ helper();
   - Are not present in the produced stack string.
   - Do not count towards any stack length limit that the engine applies.
   - Are conceptually removed prior to applying any limit or formatting.
+ 
+A `stack frame` is implementation defined.
 
 ## Relationship to existing host behavior
 
@@ -161,10 +161,6 @@ See the full spec draft:
 
 - Continued reliance on host-specific APIs (`Error.captureStackTrace`) or post-processing. Rejected for lack of portability to other JS engines, difficulty of API use, and CPU overhead related.
 - Accepting a frame index or sentinel instead of a function. Rejected due to brittleness and lack of composability across call paths.
-
-## TC39 stages and champions
-
-- Ready for Stage 1
 
 ## Conclusion
 
